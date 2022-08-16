@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isConnected: Bool = Reachability.standard.isConnected
     var body: some View {
-        VStack {
-            Image(systemName: "bus")
-                .resizable()
-                .frame(width:50, height:50)
-            Text("Downtown Bus")
-                .borderedCaption()
-            
-            Button("Toggle reachability") {
-                print("Connection sstatus: \(Reachability.standard.isConnected)")
+        if !isConnected {
+            VStack {
+                Text("❌ no internet connection")
+            }
+        } else {
+            VStack {
+                Image(systemName: "bus")
+                    .resizable()
+                    .frame(width:50, height:50)
+                Text("Downtown Bus")
+                    .borderedCaption()
+                
+                Button("Toggle reachability") {
+                    print("Connection sstatus: \(Reachability.standard.isConnected)")
+                }
             }
         }
     }
