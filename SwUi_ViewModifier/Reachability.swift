@@ -21,10 +21,10 @@ struct Constants {
 }
 
 class Reachability: ObservableObject {
-    static let standard = Reachability(isConnected: .constant(false))
+    static let standard = Reachability(isConnected: Published(initialValue: true))
     let monitor = NWPathMonitor()
     weak var notification = NotificationCenter.default
-    @Binding var isConnected: Bool
+    @Published var isConnected: Bool = true
     
     var context: Context?
 
@@ -32,7 +32,7 @@ class Reachability: ObservableObject {
         return standard
     }
 
-    private init(isConnected: Binding<Bool>) {
+    private init(isConnected: Published<Bool>) {
         self._isConnected = isConnected
         self.monitor.pathUpdateHandler = { [weak self] path in
             if path.status == .satisfied {
@@ -40,14 +40,14 @@ class Reachability: ObservableObject {
 //                self?.notification?.post(name: Notification.Name(Constants.reachabilityChanged),
 //                                       object: nil,
 //                                       userInfo: [Constants.connected: true])
-                self?._isConnected = .constant(true)
+                self?._isConnected = Published(wrappedValue: true)
                 print("📣 isConnected? \(Reachability.standard.isConnected)")
             } else {
                 print("🌎 disconnected ❌")
 //                self?.notification?.post(name: Notification.Name(Constants.reachabilityChanged),
 //                                       object: nil,
 //                                       userInfo: [Constants.connected: false])
-                self?._isConnected = .constant(false)
+                self?._isConnected = Published(wrappedValue: false)
                 print("📣 isConnected? \(Reachability.standard.isConnected)")
             }
         }
