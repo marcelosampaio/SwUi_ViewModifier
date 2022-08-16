@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct SwUi_ViewModifierApp: App {
+    @State var connected = Reachability.standard.isConnected
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if connected {
+                ContentView()
+                    .onAppear(perform: Reachability.standard.startMonitoring)
+            } else {
+                ReachabilityView()
+                    .onAppear(perform: Reachability.standard.startMonitoring)
+            }
+            
         }
     }
 }

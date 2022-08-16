@@ -15,6 +15,10 @@ struct ContentView: View {
                 .frame(width:50, height:50)
             Text("Downtown Bus")
                 .borderedCaption()
+            
+            Button("Toggle reachability") {
+                print("Connection sstatus: \(Reachability.standard.isConnected)")
+            }
         }
     }
 }

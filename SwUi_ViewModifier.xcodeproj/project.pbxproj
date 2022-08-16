@@ -13,6 +13,8 @@
 		2DC6E72928AAFEAE00D1D417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC6E72828AAFEAE00D1D417 /* Preview Assets.xcassets */; };
 		2DC6E73028AAFF1400D1D417 /* BorderedCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E72F28AAFF1400D1D417 /* BorderedCaption.swift */; };
 		2DC6E73228AAFF8200D1D417 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E73128AAFF8200D1D417 /* View+Utils.swift */; };
+		2DC6E73428AB016300D1D417 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E73328AB016300D1D417 /* Reachability.swift */; };
+		2DC6E73628AB0D1700D1D417 /* ReachabilityVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC6E73528AB0D1700D1D417 /* ReachabilityVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2DC6E72828AAFEAE00D1D417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DC6E72F28AAFF1400D1D417 /* BorderedCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCaption.swift; sourceTree = "<group>"; };
 		2DC6E73128AAFF8200D1D417 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		2DC6E73328AB016300D1D417 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2DC6E73528AB0D1700D1D417 /* ReachabilityVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,10 @@
 				2DC6E72328AAFEAC00D1D417 /* ContentView.swift */,
 				2DC6E72F28AAFF1400D1D417 /* BorderedCaption.swift */,
 				2DC6E73128AAFF8200D1D417 /* View+Utils.swift */,
+				2DC6E73328AB016300D1D417 /* Reachability.swift */,
 				2DC6E72528AAFEAE00D1D417 /* Assets.xcassets */,
 				2DC6E72728AAFEAE00D1D417 /* Preview Content */,
+				2DC6E73528AB0D1700D1D417 /* ReachabilityVIew.swift */,
 			);
 			path = SwUi_ViewModifier;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				2DC6E73028AAFF1400D1D417 /* BorderedCaption.swift in Sources */,
 				2DC6E72428AAFEAC00D1D417 /* ContentView.swift in Sources */,
 				2DC6E73228AAFF8200D1D417 /* View+Utils.swift in Sources */,
+				2DC6E73628AB0D1700D1D417 /* ReachabilityVIew.swift in Sources */,
+				2DC6E73428AB016300D1D417 /* Reachability.swift in Sources */,
 				2DC6E72228AAFEAC00D1D417 /* SwUi_ViewModifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
