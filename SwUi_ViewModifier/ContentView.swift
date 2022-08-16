@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isConnected: Bool = Reachability.standard.isConnected
+    @ObservedObject var reachability: Reachability = Reachability.standard.self
     var body: some View {
-        if !isConnected {
+        if !reachability.isConnected {
             VStack {
                 Text("❌ no internet connection")
             }
